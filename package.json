@@ -1,0 +1,19 @@
+{
+  "name": "smart-career-bd-api",
+  "version": "0.0.1",
+  "description": "Complete JobBoard Application Programming Interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/findforhad/smart-career-bd-api.git"
+  },
+  "author": "Forhad Chowdhury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/findforhad/smart-career-bd-api/issues"
+  },
+  "homepage": "https://github.com/findforhad/smart-career-bd-api#readme"
+}
