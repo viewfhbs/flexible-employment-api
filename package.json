@@ -4,6 +4,7 @@
   "description": "Complete JobBoard Application Programming Interface",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,24 @@
   "bugs": {
     "url": "https://github.com/findforhad/smart-career-bd-api/issues"
   },
-  "homepage": "https://github.com/findforhad/smart-career-bd-api#readme"
+  "homepage": "https://github.com/findforhad/smart-career-bd-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "mysql2": "^2.0.2",
+    "nodemailer": "^6.4.2",
+    "rand-token": "^0.4.0",
+    "sequelize": "^5.21.2",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6"
+  }
 }
