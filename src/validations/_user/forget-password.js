@@ -1,6 +1,6 @@
 import { isLength } from "validator";
 
-export default function({ new_password, confirm_new_password }) {
+export default ({ new_password, confirm_new_password }) => {
   const errors = {};
 
   if (
@@ -29,4 +29,4 @@ export default function({ new_password, confirm_new_password }) {
   if (Object.entries(errors).length === 0)
     return { validationStatus: true, errors: null };
   else return { validationStatus: false, errors };
-}
+};

@@ -24,7 +24,6 @@ export default async (req, res) => {
       }).then(() => {
         res.status(200).json({
           status: true,
-          success: true,
           message: "Your email is verified now."
         });
       });

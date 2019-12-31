@@ -14,7 +14,7 @@ user.post("/login", controller.login);
 /*
    Route [GET] for user account activation
 */
-user.get("/verify-email/:token", controller.verify_email);
+user.post("/verify-email/:token", controller.verify_email);
 
 /*
    Route [POST] for user forgot password

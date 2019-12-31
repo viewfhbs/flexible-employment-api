@@ -12,19 +12,17 @@ export default async (req, res) => {
       .status(422)
       .json({ status: false, message: "Enter a valid email" });
 
+  const user = await database.User.findOne({
+    raw: true,
+    where: { email: email.toLowerCase() }
+  });
+
+  if (!user)
+    return res.status(401).json({ message: "Please enter the correct email" });
+
+  let reset_password_token = randomToken.generate(8);
+
   try {
-    const user = await database.User.findOne({
-      raw: true,
-      where: { email: email.toLowerCase() }
-    });
-
-    if (!user)
-      return res
-        .status(401)
-        .json({ message: "Please enter the correct email" });
-
-    let reset_password_token = randomToken.generate(8);
-
     await database.User.update(
       { reset_password_token, reset_password_expired: false },
       { where: { email: email.toLowerCase() } }

@@ -1,4 +1,5 @@
 import "dotenv/config";
+import path from "path";
 import http from "http";
 import express from "express";
 import routes from "./routes/index";
@@ -9,6 +10,7 @@ const log = console.log;
 app.server = http.createServer(app);
 
 app.use(require("morgan")("dev"));
+app.use("./uploads", express.static("uploads"));
 app.use(express.json({ limit: process.env.BodyLimit }));
 app.use(
   require("cors")({
@@ -22,6 +24,7 @@ app.use(
 
 //Routes for application
 app.use("/api", routes.user);
+app.use("/api", routes.employe);
 
 //Welcome Route
 app.get("/", (req, res) => {

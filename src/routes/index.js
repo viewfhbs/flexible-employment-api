@@ -1,7 +1,9 @@
 import user from "./user";
+import employe from "./employe";
 
 const routes = {
-  user
+  user,
+  employe
 };
 
 export default routes;
